@@ -12,6 +12,7 @@ on:
   pull_request:
     branches:
       - main
+      - scratch-2280-base
 
 permissions:
   contents: read
