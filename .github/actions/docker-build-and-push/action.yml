@@ -63,6 +63,10 @@ runs:
       id: build
       uses: docker/build-push-action@v6
       with:
+        # Build from the job's checkout. Without it buildx uses the Git context,
+        # which resolves refs/pull/N/merge again at build time and can differ
+        # from the SHA the job checked out.
+        context: .
         file: ${{ inputs.docker-file }}
         push: ${{ inputs.push == 'true' }}
         # SBOM attestations turn the image into a manifest list which the
