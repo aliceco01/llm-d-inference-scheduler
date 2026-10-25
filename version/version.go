@@ -34,6 +34,3 @@ const (
 	// the installed bundle version.
 	BundleVersionAnnotation = "llm-d.ai/bundle-version"
 )
-
-// scratch drift marker for llm-d/llm-d-router#3625
-var scratchDriftMarker = undefinedSymbolFromMovedBase
